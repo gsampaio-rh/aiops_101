@@ -1,0 +1,71 @@
+### Post-Mortem Report for ItOps Team: Stock Exchange Incident
+
+**Incident Title:** Trading Halt Due to Server Outage  
+**Incident Number:** ITOPS-20250124-001  
+**Date & Time:** January 24, 2025, 09:35 AM EST  
+**Duration:** 2 hours 45 minutes  
+**Impact:** Trading halted; $45M delayed trades; $2M revenue loss.  
+**Detected By:** Prometheus monitoring and user reports.  
+**Resolved By:** Infrastructure and Database Teams.
+
+---
+
+### **Root Cause**
+Failure of the primary database node caused cascading delays due to improperly configured failover mechanisms.
+
+---
+
+### **Timeline**
+| **Time**   | **Event**                                           |
+|------------|-----------------------------------------------------|
+| 09:20 AM   | Increased latency detected in transactions.         |
+| 09:25 AM   | Prometheus alert triggered for high DB latency.    |
+| 09:30 AM   | Primary DB node failed, causing transaction delays. |
+| 09:35 AM   | Trading halted to prevent data inconsistencies.     |
+| 10:45 AM   | Misconfigured failover identified.                  |
+| 12:20 PM   | Trading operations resumed.                        |
+
+---
+
+### **Impact Analysis**
+- **Operational:** Trading suspended; delayed settlements.  
+- **Financial:** $2M revenue loss; $45M delayed trades.  
+- **Customer:** Outages led to client dissatisfaction and reputational damage.  
+
+---
+
+### **Resolution Steps**
+1. Fixed database failover configuration.  
+2. Promoted secondary node to restore operations.  
+3. Cleared transaction backlogs without inconsistencies.  
+4. Communicated updates to stakeholders.
+
+---
+
+### **Preventive Measures**
+1. **Database Audits:** Regular validation of failover configurations.  
+2. **Monitoring Protocols:** Enhance alert escalation and response SLAs.  
+3. **Failover Testing:** Quarterly drills to simulate critical scenarios.  
+4. **Change Management:** Strengthened approval and rollback procedures.  
+5. **Customer Communication:** Standardized incident response messaging.
+
+---
+
+### **Lessons Learned**
+1. Early alerts require immediate response to prevent escalation.  
+2. Configuration management must be stringent to avoid system failures.  
+3. Proactive failover testing is essential for resilience.
+
+---
+
+### **Follow-Up Actions**
+| **Action**                   | **Owner**       | **Due Date**   |
+|------------------------------|----------------|----------------|
+| Team training on incident response | Training Coordinator | 02/01/2025   |
+| Implement advanced monitoring tools | Monitoring Lead      | 02/10/2025   |
+| Schedule database failover testing | DB Admin Lead        | 02/05/2025   |
+
+---
+
+**Conclusion:**  
+The incident highlighted gaps in failover and response protocols. Actions are underway to strengthen systems and processes to ensure reliability in future operations.
