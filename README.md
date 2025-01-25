@@ -10,7 +10,7 @@ The notebooks are designed with incremental storytelling, guiding you from found
 
 ## Repository Structure
 
-```
+```bash
 .
 ├── 1-Exploratory-Data-Analysis.ipynb   # Intro to data visualization and pattern discovery in Kubernetes
 ├── 2-Machine-Learning.ipynb            # Basics of machine learning with structured Kubernetes data
@@ -22,18 +22,10 @@ The notebooks are designed with incremental storytelling, guiding you from found
 ├── 8-Transformers.ipynb                # Using transformers for time-series predictions
 ├── 9-LLM.ipynb                         # Leveraging large language models for Kubernetes operational tasks
 ├── 10-GraphRag.ipynb                   # Graph-based RAG for uncovering ITOps relationships
+├── 11-Agents.ipynb                     # Building AI agents for autonomous Kubernetes management
 ├── README.md                           # This file
-├── data/                               # Raw and preprocessed datasets
-│   ├── cluster_metrics.csv
-│   ├── event_logs.csv
-│   ├── incident_labels.csv
-│   ├── preprocessed_kubernetes_data.csv
-│   └── scaling_events.csv
 ├── dataset/                            # Additional dataset files
 │   └── kubernetes_operational_data.csv
-├── draft/                              # Draft notebooks
-│   ├── 0-datasets.ipynb
-│   └── 3.ipynb
 ├── graph/                              # Graph-related files
 │   └── post-mortem.txt
 ├── images/                             # Images used in the notebooks
@@ -116,6 +108,10 @@ Use LLMs for log analysis, incident reporting, and troubleshooting automation.
 ### 10. GraphRAG
 
 Explore Graph-based Retrieval-Augmented Generation to uncover relationships between Kubernetes services and incidents.
+
+### 11. Agents for Autonomous Kubernetes Management
+
+Build AI agents that dynamically monitor, reason, and act on Kubernetes environments. Learn how agents use tools like monitoring APIs, predictive models, and automated workflows to enable self-healing and autonomous scaling in real time.
 
 ## Data Sources
 
